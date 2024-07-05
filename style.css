@@ -1,43 +1,68 @@
-/* style.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-}
-
-#store-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.store {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
+    position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+header .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+}
+
+#store-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.store {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.store:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.store img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
 .store h2 {
-    color: #333;
+    color: #007bff;
+    margin-bottom: 10px;
 }
 
 .store p {
-    color: #666;
+    color: #6c757d;
+    margin: 5px 0;
 }
 
-
-/* Add the following CSS to your existing code for the search bar */
 .search-bar {
     text-align: center;
     margin-bottom: 20px;
@@ -47,9 +72,38 @@ header {
     padding: 10px;
     width: 100%;
     max-width: 400px;
-    border: 1px solid #ccc;
+    border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
 }
 
+#search-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
 
+#store-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#store-details img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.store-info h2 {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+.store-info p, .store-info ul {
+    color: #6c757d;
+}
